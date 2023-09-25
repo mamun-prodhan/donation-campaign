@@ -15,7 +15,7 @@ const Header = () => {
     </>
   );
   return (
-    <div className="navbar bg-base-100 mb-10">
+    <div className="navbar bg-base-100 mb-10 bg-[#0052FF26]">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -41,7 +41,7 @@ const Header = () => {
             {links}
           </ul>
         </div>
-        <Link>
+        <Link to="/">
           <img src={logo} alt="logo" />
         </Link>
       </div>
