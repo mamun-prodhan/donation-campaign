@@ -1,5 +1,5 @@
-import { list } from "postcss";
 import { useEffect, useState } from "react";
+import DonationCard from "../DonationCard/DonationCard";
 
 const Home = () => {
   const [donationData, setDonationData] = useState([]);
@@ -10,8 +10,8 @@ const Home = () => {
       .then((data) => setDonationData(data));
   }, []);
   return (
-    <div>
-      <div className="pt-36 pb-52">
+    <div className="pt-36 ">
+      <div className="pb-52">
         <h1 className="text-5xl font-bold text-center">
           I Grow By Helping People In Need
         </h1>
@@ -28,9 +28,11 @@ const Home = () => {
           </button>
         </div>
       </div>
-      {/* {donationData.map((donation, idx) => (
-        <li key={idx}>{donation.title}</li>
-      ))} */}
+      <div className="grid grid-cols-4 gap-6">
+        {donationData.map((donation, idx) => (
+          <DonationCard key={idx} donation={donation}></DonationCard>
+        ))}
+      </div>
     </div>
   );
 };
