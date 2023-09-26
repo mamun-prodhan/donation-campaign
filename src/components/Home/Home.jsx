@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import DonationCard from "../DonationCard/DonationCard";
+import DonationDetailsCard from "../DonationCard/DonationDetailsCard";
 
 const Home = () => {
   const [donationData, setDonationData] = useState([]);
@@ -30,7 +30,10 @@ const Home = () => {
       </div>
       <div className="grid grid-cols-4 gap-6">
         {donationData.map((donation, idx) => (
-          <DonationCard key={idx} donation={donation}></DonationCard>
+          <DonationDetailsCard
+            key={idx}
+            donation={donation}
+          ></DonationDetailsCard>
         ))}
       </div>
     </div>

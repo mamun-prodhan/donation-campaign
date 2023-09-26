@@ -27,8 +27,6 @@ const DonationDetails = () => {
   }, []);
 
   const handleDonate = () => {
-    // setDonatedData(intId);
-    // toast.success("Donated Successfully");
     if (storedDonatedData.includes(intId)) {
       toast.error("Already donated");
       console.log(storedDonatedData);
@@ -37,7 +35,6 @@ const DonationDetails = () => {
       const updatedData = getStoredDonatedData();
       setStoredDonatedData(updatedData);
       toast.success("Donated Successfully");
-      console.log(storedDonatedData);
     }
   };
   return (

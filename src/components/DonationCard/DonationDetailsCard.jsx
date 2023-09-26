@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const DonationCard = ({ donation }) => {
+const DonationDetailsCard = ({ donation }) => {
   const { id, picture, title, category, card_bg, category_bg, text_color } =
     donation;
   return (
@@ -26,4 +26,4 @@ const DonationCard = ({ donation }) => {
   );
 };
 
-export default DonationCard;
+export default DonationDetailsCard;
