@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const DonatedCard = ({ data }) => {
   const {
@@ -26,7 +27,9 @@ const DonatedCard = ({ data }) => {
         <h2 className="card-title">{title}</h2>
         <p>${price}</p>
         <div className="card-actions">
-          <button className="btn btn-primary">view details</button>
+          <Link to={`/details/${id},`}>
+            <button className="btn btn-primary">view details</button>
+          </Link>
         </div>
       </div>
     </div>
