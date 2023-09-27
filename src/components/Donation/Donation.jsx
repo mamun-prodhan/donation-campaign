@@ -29,15 +29,15 @@ const Donation = () => {
   }, []);
 
   return (
-    <div className="mb-32">
-      <div className="grid grid-cols-2 gap-5 mb-10">
+    <div className="mb-10 md:mb-16 lg:mb-32 mt-4 md:mt-6 lg:mt-10">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-10 px-4 md:px-10">
         {allDonatedData.slice(0, dataLength).map((data) => (
           <DonatedCard key={data.id} data={data}></DonatedCard>
         ))}
       </div>
       <button
         onClick={handleClick}
-        className={`px-7 py-4  mx-auto text-white font-semibold rounded-lg bg-[#009444] hover:bg-[#18b561] duration-300 ${
+        className={`px-4 md:px-7 py-2 md:py-4  mx-auto text-white font-semibold rounded-lg bg-[#009444] hover:bg-[#18b561] duration-300 ${
           allDonatedData.length > 4 && isClicked === false ? "block" : "hidden"
         }`}
       >
