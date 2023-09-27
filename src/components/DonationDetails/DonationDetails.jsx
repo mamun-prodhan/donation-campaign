@@ -38,19 +38,21 @@ const DonationDetails = () => {
     }
   };
   return (
-    <div className="mb-32 ">
-      <div className="mb-14 relative">
-        <img className="w-[1320px]" src={picture} alt="" />
-        <div className="absolute inset-x-0 bottom-0 bg-black opacity-40 h-[130px]"></div>
+    <div className="mb-10 md:mb-16 lg:mb-32 px-4 md:px-10">
+      <div className=" mb-6 md:mb-10 lg:mb-14 relative">
+        <img className="w-full" src={picture} alt="" />
+        <div className="absolute inset-x-0 bottom-0 bg-black opacity-40 h-[60px] md:h-[100px] lg:h-[130px]"></div>
         <button
           onClick={handleDonate}
-          className="px-6 py-4 rounded-md absolute left-8 bottom-8 text-xl font-semibold text-white"
+          className="px-4 lg:px-6 py-2 lg:py-4 rounded-md absolute left-4 md:left-10 bottom-3 md:bottom-7 lg:bottom-8 text-sm md:text-xl font-semibold text-white"
           style={{ backgroundColor: text_color }}
         >
           Donate ${price}
         </button>
       </div>
-      <h2 className="text-5xl font-bold mb-6">{title}</h2>
+      <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold mb-4 md:mb-6">
+        {title}
+      </h2>
       <p className="text-base">{description}</p>
       <ToastContainer />
     </div>
