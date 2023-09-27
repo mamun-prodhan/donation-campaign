@@ -22,7 +22,7 @@ const DonationDetails = () => {
     if (storedDonatedData.includes(intId)) {
       toast.error("Already Donated", {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 2000,
       });
       console.log(storedDonatedData);
     } else {
@@ -31,7 +31,7 @@ const DonationDetails = () => {
       setStoredDonatedData(updatedData);
       toast.success("Donated Successfully", {
         position: "top-center",
-        autoClose: 5000,
+        autoClose: 2000,
       });
     }
   };
