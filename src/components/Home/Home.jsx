@@ -29,7 +29,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="">
+    <div className="mt-16">
       <div className="pb-52">
         <h1 className="text-5xl font-bold text-center">
           I Grow By Helping People In Need

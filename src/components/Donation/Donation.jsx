@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { getStoredDonatedData } from "../utility/localstorate";
 import DonatedCard from "../DonatedCard/DonatedCard";
-import { data } from "autoprefixer";
 
 const Donation = () => {
   const [allDonatedData, setAllDonatedData] = useState([]);
@@ -31,7 +30,6 @@ const Donation = () => {
 
   return (
     <div className="mb-32">
-      <h2>Donated Data : {allDonatedData.length}</h2>
       <div className="grid grid-cols-2 gap-5 mb-10">
         {allDonatedData.slice(0, dataLength).map((data) => (
           <DonatedCard key={data.id} data={data}></DonatedCard>
@@ -39,11 +37,11 @@ const Donation = () => {
       </div>
       <button
         onClick={handleClick}
-        className={`btn btn-primary mx-auto ${
+        className={`px-7 py-4  mx-auto text-white font-semibold rounded-lg bg-[#009444] hover:bg-[#18b561] duration-300 ${
           allDonatedData.length > 4 && isClicked === false ? "block" : "hidden"
         }`}
       >
-        Show All
+        See All
       </button>
     </div>
   );

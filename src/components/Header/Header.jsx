@@ -3,9 +3,11 @@ import "./Header.css";
 import { NavLink, Link } from "react-router-dom";
 const Header = () => {
   return (
-    <div className="flex items-center justify-between mb-36">
+    <div className="flex items-center justify-between py-10 mb-10">
       <div>
-        <img src={logo} alt="logo" />
+        <Link to="/">
+          <img src={logo} alt="logo" />
+        </Link>
       </div>
       <div>
         <ul className="flex gap-12">
