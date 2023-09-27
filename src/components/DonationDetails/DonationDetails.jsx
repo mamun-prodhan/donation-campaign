@@ -20,7 +20,10 @@ const DonationDetails = () => {
 
   const handleDonate = () => {
     if (storedDonatedData.includes(intId)) {
-      toast.error("Already donated");
+      toast.error("Already Donated", {
+        position: "top-center",
+        autoClose: 5000,
+      });
       console.log(storedDonatedData);
     } else {
       setDonatedData(intId);
