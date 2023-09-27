@@ -31,12 +31,18 @@ const renderCustomizedLabel = ({
   );
 };
 const Statistics = () => {
-  const allDonationData = useLoaderData();
+  const [allDonationData, setAllDonationData] = useState([]);
   const [donatedData, setDonatedData] = useState([]);
 
   const remainingDonation = allDonationData.filter(
     (item) => !donatedData.includes(item.id)
   );
+
+  useEffect(() => {
+    fetch("data.json")
+      .then((data) => data.json())
+      .then((data) => setAllDonationData(data));
+  }, []);
 
   useEffect(() => {
     const storedData = getStoredDonatedData();

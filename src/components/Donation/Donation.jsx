@@ -4,15 +4,21 @@ import { getStoredDonatedData } from "../utility/localstorate";
 import DonatedCard from "../DonatedCard/DonatedCard";
 
 const Donation = () => {
+  const [allData, setAllData] = useState([]);
   const [allDonatedData, setAllDonatedData] = useState([]);
   const [dataLength, setDataLength] = useState(4);
   const [isClicked, setIsClicked] = useState(false);
-  const allData = useLoaderData();
 
   const handleClick = () => {
     setDataLength(allDonatedData.length);
     setIsClicked(true);
   };
+
+  useEffect(() => {
+    fetch("data.json")
+      .then((data) => data.json())
+      .then((data) => setAllData(data));
+  }, []);
 
   useEffect(() => {
     const donatedDataIds = getStoredDonatedData();
@@ -26,12 +32,12 @@ const Donation = () => {
       }
       setAllDonatedData(donatedData);
     }
-  }, []);
+  }, [allData]);
 
   return (
     <div className="mb-10 md:mb-16 lg:mb-32 mt-4 md:mt-6 lg:mt-10">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mb-10 px-4 md:px-10">
-        {allDonatedData.slice(0, dataLength).map((data) => (
+        {allDonatedData?.slice(0, dataLength).map((data) => (
           <DonatedCard key={data.id} data={data}></DonatedCard>
         ))}
       </div>
