@@ -5,7 +5,10 @@ const DonationDetailsCard = ({ donation }) => {
     donation;
   return (
     <Link to={`/details/${id}`}>
-      <div className="" style={{ backgroundColor: card_bg }}>
+      <div
+        className="mx-auto w-[312px] lg:w-full"
+        style={{ backgroundColor: card_bg }}
+      >
         <div>
           <img src={picture} alt="image" />
         </div>

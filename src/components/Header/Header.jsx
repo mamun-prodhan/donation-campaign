@@ -3,7 +3,7 @@ import "./Header.css";
 import { NavLink, Link } from "react-router-dom";
 const Header = () => {
   return (
-    <div className="flex items-center justify-between pt-10 pb-10 bg-[#FFF] bg-opacity-90">
+    <div className="flex flex-col md:flex-row items-center gap-10 md:gap-0 justify-between px-4 md:px-10 pt-6 md:pt-10 pb-6 md:pb-10 bg-[#FFF] bg-opacity-90">
       <div>
         <Link to="/">
           <img src={logo} alt="logo" />
