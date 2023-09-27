@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import DonationDetailsCard from "../DonationCard/DonationDetailsCard";
+import bgimg from "../../assets/bgimg.png";
 
 const Home = () => {
   const [donationData, setDonationData] = useState([]);
@@ -29,7 +30,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="mt-16">
+    <div className="pt-16 relative bg-[#FFF] bg-opacity-90">
+      <img src={bgimg} alt="" className="absolute -top-44 z-[-10]" />
       <div className="pb-52">
         <h1 className="text-5xl font-bold text-center">
           I Grow By Helping People In Need
