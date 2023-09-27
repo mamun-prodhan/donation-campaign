@@ -50,7 +50,7 @@ const Statistics = () => {
     { name: "Group B", value: donatedData.length },
   ];
   return (
-    <div>
+    <div className="px-4 md:px-10 mb-10 md:mb-16">
       <ResponsiveContainer width="100%" height={400}>
         <PieChart width={400} height={400}>
           <Pie
@@ -72,12 +72,12 @@ const Statistics = () => {
           </Pie>
         </PieChart>
       </ResponsiveContainer>
-      <div className="flex gap-14 justify-center">
-        <div className="flex items-center gap-4">
+      <div className="flex flex-col md:flex-row gap-5 md:gap-14 justify-center">
+        <div className="flex items-center gap-4 mx-auto md:mx-0">
           <p className="text-lg">Your Donation</p>
           <hr className="bg-[#00C49F] h-3 w-24" />
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4 mx-auto md:mx-0">
           <p className="text-lg">Total Donation</p>
           <hr className="bg-[#FF444A] h-3 w-24" />
         </div>

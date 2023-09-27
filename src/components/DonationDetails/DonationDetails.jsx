@@ -34,7 +34,10 @@ const DonationDetails = () => {
       setDonatedData(intId);
       const updatedData = getStoredDonatedData();
       setStoredDonatedData(updatedData);
-      toast.success("Donated Successfully");
+      toast.success("Donated Successfully", {
+        position: "top-center",
+        autoClose: 5000,
+      });
     }
   };
   return (
