@@ -1,12 +1,8 @@
-# Course Registration
+# Donation Campaign
 
 ## Features
 
-1. User can select course within 20 credit hour
-2. If the credit hour is more than 20 then it will show a toast that user can't add more than 20 credit
-3. There is remaining credit hour , it will show how much credit hour user can add from 20
-4. User can't add the course again which is already added
-
-## State Management
-
-In this project for managing state, I have used React state hook, useState(). I declared the state in the common parent component of two child paren component. I lifting up the state in parent component so that i can share it in two child component together. React has one way data binding which is parent to child. So i declared the state in parent and share it to the child component
+1. This is a Donation Campaign Website. There are 4 categories of donation. User can see donation details by clicking donation card.
+2. In Donation Details page, If user click on Donate button, then a toast will show that "Successfully Donated", and the donated data will save on Local Storage.
+3. In Donation page, user can see the data he donated. If the data is more than 4, then "See All" button will appear, after clicking on "See All" button he can see all the data he donated.
+4. In Statistics page, there is a pie chart showing the users donation against the total donation in parcentage.
