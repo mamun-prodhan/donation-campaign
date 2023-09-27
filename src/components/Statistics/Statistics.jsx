@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import { getStoredDonatedData } from "../utility/localstorate";
@@ -13,7 +13,6 @@ const renderCustomizedLabel = ({
   innerRadius,
   outerRadius,
   percent,
-  index,
 }) => {
   const radius = innerRadius + (outerRadius - innerRadius) * 0.5;
   const x = cx + radius * Math.cos(-midAngle * RADIAN);

@@ -1,11 +1,11 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import DonationDetailsCard from "../DonationCard/DonationDetailsCard";
 import bgimg from "../../assets/bgimg.png";
 
 const Home = () => {
   const [donationData, setDonationData] = useState([]);
   const [displayData, setDisplayData] = useState([]);
-  const [searchData, setSearchData] = useState(""); // State for search query
+  const [searchData, setSearchData] = useState("");
 
   const handleSearch = () => {
     const searchedValue = searchData.toLowerCase();

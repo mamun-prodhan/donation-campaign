@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 
@@ -11,16 +11,8 @@ const DonationDetails = () => {
   const intId = parseInt(id);
   const donationData = useLoaderData();
   const donationDetailsData = donationData.find((data) => intId === data.id);
-  const {
-    picture,
-    title,
-    price,
-    category,
-    card_bg,
-    category_bg,
-    text_color,
-    description,
-  } = donationDetailsData;
+  const { picture, title, price, text_color, description } =
+    donationDetailsData;
 
   useEffect(() => {
     setStoredDonatedData(getStoredDonatedData());
